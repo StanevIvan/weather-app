@@ -4,8 +4,6 @@
 
 
 import requests
-import json
-
 
 class Weather:
     def __init__(self, city):
