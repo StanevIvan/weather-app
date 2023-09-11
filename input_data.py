@@ -2,7 +2,6 @@
 # the class should have a method which returns weather data for the city from the API.
 # API key is this: 13598b4424ab2b53a191c2462b53f756. It is from https://openweathermap.org/api
 
-
 import requests
 
 class Weather:
