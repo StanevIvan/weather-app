@@ -22,7 +22,7 @@ class WeatherData:
         if city.isalpha():
             self.__city = city
         else:
-            raise ValueError("City name must contain only letters")
+            raise ValueError("City name must contain only letters!")
 
     @property
     def apikey(self):
@@ -30,7 +30,10 @@ class WeatherData:
 
     @apikey.setter
     def apikey(self, apikey):
-        self.__apikey = apikey
+        if apikey.isalnum() and len(apikey) == 32:
+            self.__apikey = apikey
+        else:
+            raise ValueError("Wrong API key!")
 
     def get_weather_data(self):
         response = requests.get(self.url)
